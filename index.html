@@ -1,423 +1,377 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrick Michel - GeometriAlien | Tatuador Geométrico CDMX</title>
-    <meta name="description" content="Andrick Michel (GeometriAlien) - Tatuador especializado en geometría sagrada con 10 años de experiencia en CDMX. Portfolio de tatuajes geométricos únicos.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrick Michel &#x2014; Tattoo Artist | Mexico City, Mexico</title>
+  <meta name="description" content="Andrick Michel is a tattoo artist based in Mexico City, Mexico specializing in Tattoo Art. Tattoos that tell your story. Based in Mexico City, Mexico.">
+  <link rel="canonical" href="https://bayouwebstudio.github.io/alieninkspiral/">
+  <meta property="og:title" content="Andrick Michel &#x2014; Tattoo Artist">
+  <meta property="og:description" content="Tattoos that tell your story. Based in Mexico City, Mexico.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/BayouWebStudio/alieninkspiral/main/img/1.jpg">
+  <meta property="og:url" content="https://bayouwebstudio.github.io/alieninkspiral/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andrick Michel",
+    "jobTitle": "Tattoo Artist",
+    "url": "https://bayouwebstudio.github.io/alieninkspiral/",
+    "sameAs": ["https://www.instagram.com/alieninkspiral"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Mexico City, Mexico", "addressCountry": "US" }
+  }
+  </script>
+  <style>
     
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Andrick Michel - GeometriAlien | Tatuador Geométrico CDMX">
-    <meta property="og:description" content="Tatuador especializado en geometría sagrada con 10 años de experiencia en CDMX. Portfolio de tatuajes geométricos únicos.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bayouwebstudio.github.io/alieninkspiral/">
-    <meta property="og:image" content="https://bayouwebstudio.github.io/alieninkspiral/images/og-image.jpg">
-    <meta property="og:site_name" content="Alien Ink Spiral">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Andrick Michel - GeometriAlien | Tatuador Geométrico CDMX">
-    <meta name="twitter:description" content="Tatuador especializado en geometría sagrada con 10 años de experiencia en CDMX.">
-    
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    :root {
+      --black: #0a0a0a;
+      --charcoal: #141414;
+      --gold: #C9A84C;
+      --white: #f5f5f0;
+      --dim: #888;
+      --border: rgba(255,255,255,0.07);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(10,5,5,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links a {
+      color: var(--dim);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .lang-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--dim);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-toggle:hover { border-color: var(--gold); color: var(--gold); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 1px; background: var(--white); margin: 5px 0; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+    .mobile-menu {
+      display: none; position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
+      background: var(--charcoal); padding: 24px 48px; border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a { display: block; color: var(--white); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    /* FLOATING BOOK */
+    .book-float {
+      position: fixed; bottom: 32px; right: 32px; z-index: 200;
+      background: var(--gold); color: #000;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      text-decoration: none; padding: 14px 22px; border-radius: 2px;
+      box-shadow: 0 4px 24px rgba(201,168,76,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .book-float:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
+    /* FADE-UP ANIMATIONS */
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    /* FOOTER */
+    footer {
+      background: var(--charcoal); padding: 48px 72px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-logo { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--dim); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--dim); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { color: var(--dim); font-size: 0.72rem; }
+    /* SHARED */
+    .section-label { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400; line-height: 1.1; margin-bottom: 24px;
+    }
+    .btn-gold {
+      display: inline-block; background: var(--gold); color: #000;
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 16px 40px;
+      transition: opacity 0.2s;
+    }
+    .btn-gold:hover { opacity: 0.88; }
+    .btn-outline {
+      display: inline-block; border: 1px solid var(--border); color: var(--white);
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 14px 36px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    /* MOBILE */
+    @media (max-width: 900px) {
+      nav { padding: 18px 24px; } .nav-links { display: none; } .hamburger { display: block; }
+      footer { flex-direction: column; gap: 24px; padding: 40px 24px; text-align: center; }
+    }
+    @media (max-width: 600px) {
+      footer { padding: 32px 20px; }
+    }
+  
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; align-items: flex-end;
+      padding: 0 72px 80px; position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('img/1.jpg');
+      background-size: cover; background-position: center top;
+      filter: brightness(0.42); transform: scale(1.02);
+    }
+    .hero-gradient {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.15) 55%, transparent 100%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 700px; }
+    .hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 300; line-height: 0.95; letter-spacing: -0.01em; margin-bottom: 20px;
+    }
+    .hero-sub { font-size: 0.92rem; color: var(--dim); letter-spacing: 0.06em; margin-bottom: 40px; max-width: 480px; line-height: 1.7; }
+    .hero-cta {
+      display: inline-block; border: 1px solid var(--gold); color: var(--gold);
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 14px 32px; transition: background 0.2s, color 0.2s;
+    }
+    .hero-cta:hover { background: var(--gold); color: #000; }
+    .social-row { display: flex; gap: 16px; margin-top: 32px; }
+    .social-row a { color: var(--dim); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: color 0.2s; }
+    .social-row a:hover { color: var(--gold); }
+    /* ABOUT PREVIEW */
+    .about-preview { background: var(--charcoal); padding: 96px 72px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .about-text p { color: var(--dim); line-height: 1.8; margin-bottom: 20px; font-size: 0.95rem; }
+    .about-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; filter: brightness(0.85); transition: filter 0.3s; }
+    .about-img:hover { filter: brightness(1); }
+    .stats-row { display: flex; gap: 48px; margin-top: 40px; }
+    .stat-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.4rem; font-weight: 300; color: var(--gold); }
+    .stat-label { font-size: 0.7rem; color: var(--dim); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+    .about-link { display: inline-block; margin-top: 32px; color: var(--gold); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; border-bottom: 1px solid var(--gold); padding-bottom: 2px; transition: opacity 0.2s; }
+    .about-link:hover { opacity: 0.7; }
+    /* GALLERY PREVIEW */
+    .gallery-section { padding: 96px 72px; background: var(--black); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; max-width: 1200px; margin: 0 auto 48px; }
+    .gallery-item { aspect-ratio: 1; overflow: hidden; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85); transition: filter 0.4s, transform 0.4s; display: block; }
+    .gallery-item:hover img { filter: brightness(1); transform: scale(1.04); }
+    .gallery-cta-wrap { text-align: center; }
+    /* BOOKING PREVIEW */
+    .booking-preview { background: var(--charcoal); padding: 96px 72px; text-align: center; }
+    .booking-preview h2 { max-width: 560px; margin: 0 auto 20px; }
+    .booking-preview p { color: var(--dim); max-width: 480px; margin: 0 auto 36px; font-size: 0.95rem; }
+    /* TESTIMONIALS PREVIEW */
+    .testimonials-preview { padding: 96px 72px; background: var(--black); }
+    .testimonials-preview .inner { max-width: 700px; margin: 0 auto; }
+    .testimonial-placeholder { border: 1px solid var(--border); padding: 48px; text-align: center; }
+    .testimonial-placeholder p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--dim); margin-bottom: 8px; }
+    .testimonial-placeholder small { color: var(--dim); font-size: 0.75rem; letter-spacing: 0.06em; }
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .hero { padding: 0 24px 60px; }
+      .about-preview, .gallery-section, .booking-preview, .testimonials-preview { padding: 72px 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-row { gap: 28px; }
+      h1 { font-size: clamp(3rem, 10vw, 6rem); }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <div id="cursor-glow"></div>
-    
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="alien-text">ALIEN</span>
-                <span class="ink-text">INK</span>
-            </div>
-            <div class="nav-links">
-                <a href="#inicio" class="nav-link">Inicio</a>
-                <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
-                <a href="#seminario" class="nav-link">Seminario</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
-            </div>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+  
+  <nav>
+    <a href="./index.html" class="nav-logo">Andrick Michel</a>
+    <ul class="nav-links">
+      <li><a href="./index.html" class="active"
+        data-en="Home" data-es="Home">Home</a></li>
+      <li><a href="./about.html" 
+        data-en="About" data-es="Sobre M&#xed;">About</a></li>
+      <li><a href="./tattoos.html" 
+        data-en="Tattoos" data-es="Tatuajes">Tattoos</a></li>
+      <li><a href="./booking.html" 
+        data-en="Booking" data-es="Reservaciones">Booking</a></li>
+      <li><a href="./testimonials.html" 
+        data-en="Reviews" data-es="Testimonios">Reviews</a></li>
+      <li><button class="lang-toggle" onclick="toggleLang()">ES</button></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu">
+    <a href="./index.html" data-en="Home" data-es="Inicio">Home</a>
+    <a href="./about.html" data-en="About" data-es="Sobre M&#xed;">About</a>
+    <a href="./tattoos.html" data-en="Tattoos" data-es="Tatuajes">Tattoos</a>
+    <a href="./booking.html" data-en="Booking" data-es="Reservaciones">Booking</a>
+    <a href="./testimonials.html" data-en="Reviews" data-es="Testimonios">Reviews</a>
+  </div>
+  <a href="./booking.html" class="book-float">Book</a>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-bg">
-            <div class="geometric-pattern"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-name">
-                        <span class="first-name">ANDRICK</span>
-                        <span class="last-name">MICHEL</span>
-                    </h1>
-                    <p class="hero-title">TATUADOR || GEOMETRÍA</p>
-                    <p class="hero-subtitle">GeometriAlien</p>
-                    <p class="hero-location">
-                        <span class="location-icon">📍</span>
-                        CDMX, México
-                    </p>
-                    <p class="hero-studio">@kivatattoostudio</p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Años</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">90.3K</span>
-                            <span class="stat-label">Seguidores</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">∞</span>
-                            <span class="stat-label">Geometría</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="sacred-geometry-overlay">
-                        <svg viewBox="0 0 400 400" class="sacred-geometry">
-                            <defs>
-                                <radialGradient id="geometryGradient" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" style="stop-color:#00f5ff;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:0" />
-                                </radialGradient>
-                            </defs>
-                            <circle cx="200" cy="200" r="150" fill="none" stroke="url(#geometryGradient)" stroke-width="2" opacity="0.6"/>
-                            <polygon points="200,50 350,200 200,350 50,200" fill="none" stroke="url(#geometryGradient)" stroke-width="2" opacity="0.4"/>
-                            <circle cx="200" cy="200" r="75" fill="none" stroke="url(#geometryGradient)" stroke-width="1.5" opacity="0.7"/>
-                            <polygon points="200,125 275,200 200,275 125,200" fill="none" stroke="url(#geometryGradient)" stroke-width="1.5" opacity="0.5"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-up" data-en="Tattoo Art" data-es="Tattoo Art">Tattoo Art &#xb7; Mexico City, Mexico, US</p>
+      <h1 class="fade-up" data-en="Andrick Michel" data-es="Andrick Michel">Andrick Michel</h1>
+      <p class="hero-sub fade-up" data-en="Tattoos that tell your story. Based in Mexico City, Mexico." data-es="Tattoos that tell your story. Based in Mexico City, Mexico.">Tattoos that tell your story. Based in Mexico City, Mexico.</p>
+      <a href="./booking.html" class="hero-cta fade-up" data-en="Book a Session" data-es="Book a Session">Book a Session</a>
+      <div class="social-row fade-up">
+        <a href="https://www.instagram.com/alieninkspiral" target="_blank" rel="noopener">@alieninkspiral</a>
+        <span style="color:var(--border)">&#xb7;</span>
+        <a href="https://www.instagram.com/alieninkspiral">Contact</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="sobre-mi" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Sobre Mí</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">
-                        Con más de <strong>10 años de experiencia</strong> creando arte en piel, me especializo en tatuajes geométricos que fusionan precisión técnica con geometría sagrada.
-                    </p>
-                    <p>
-                        Desde mi estudio en <strong>CDMX</strong>, transformo conceptos matemáticos y espirituales en diseños únicos que honran tanto la tradición ancestral como la innovación contemporánea.
-                    </p>
-                    <p>
-                        Como <strong>GeometriAlien</strong>, exploro las intersecciones entre lo cósmico y lo terrenal, creando piezas que trascienden el simple decorado para convertirse en verdaderos portales de significado personal.
-                    </p>
-                    <div class="experience-highlights">
-                        <div class="highlight">
-                            <span class="highlight-icon">🎯</span>
-                            <span>Especialista en Geometría Sagrada</span>
-                        </div>
-                        <div class="highlight">
-                            <span class="highlight-icon">⭐</span>
-                            <span>Verificado en Instagram - 90.3K seguidores</span>
-                        </div>
-                        <div class="highlight">
-                            <span class="highlight-icon">🏢</span>
-                            <span>@kivatattoostudio - CDMX</span>
-                        </div>
-                        <div class="highlight">
-                            <span class="highlight-icon">🤝</span>
-                            <span>Patrocinado por @cartridgesjade</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-visual">
-                    <div class="geometric-art">
-                        <svg viewBox="0 0 300 300" class="about-geometry">
-                            <defs>
-                                <linearGradient id="aboutGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#00f5ff"/>
-                                    <stop offset="50%" style="stop-color:#ff00ff"/>
-                                    <stop offset="100%" style="stop-color:#ffff00"/>
-                                </linearGradient>
-                            </defs>
-                            <g class="rotating-geometry">
-                                <polygon points="150,30 270,150 150,270 30,150" fill="none" stroke="url(#aboutGradient)" stroke-width="2"/>
-                                <circle cx="150" cy="150" r="90" fill="none" stroke="url(#aboutGradient)" stroke-width="1.5"/>
-                                <polygon points="150,60 240,150 150,240 60,150" fill="none" stroke="url(#aboutGradient)" stroke-width="1"/>
-                                <circle cx="150" cy="150" r="45" fill="none" stroke="url(#aboutGradient)" stroke-width="1"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+  <!-- ABOUT PREVIEW -->
+  <section class="about-preview">
+    <div class="about-grid">
+      <div>
+        <p class="section-label fade-up" data-en="About" data-es="Sobre M&#xed;">About</p>
+        <h2 class="fade-up">The Art Behind the Artist</h2>
+        <div class="about-text">
+          <p class="fade-up">I'm Andrick Michel, a tattoo artist based in Mexico City, Mexico.</p>
+          <p class="fade-up">My work reflects a deep passion for art and skin as canvas.</p>
         </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Portfolio</h2>
-                <div class="section-divider"></div>
-                <p class="section-subtitle">Geometría Sagrada en Cada Trazo</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="img/alieninkspiral_profile.jpg" alt="Tatuajes geométricos por Andrick Michel - AlienInkSpiral Instagram profile showcase" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-title">Instagram Portfolio</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image placeholder-image sacred">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-title">Geometría Sagrada</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image placeholder-image dotwork">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-title">Dotwork Minimalista</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image placeholder-image fractal">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-title">Fractales Orgánicos</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image placeholder-image tribal">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-title">Tribal Moderno</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image placeholder-image cosmic">
-                        <div class="portfolio-overlay">
-                            <span class="portfolio-title">Arte Cósmico</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-footer">
-                <p>Sígueme en <a href="https://instagram.com/alieninkspiral" target="_blank">@alieninkspiral</a> para ver más trabajos</p>
-            </div>
+        <div class="stats-row fade-up">
+          <div class="stat-item">
+            
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">90.1K</div>
+            <div class="stat-label" data-en="Followers" data-es="Seguidores">Followers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">Tattoo</div>
+            <div class="stat-label" data-en="Style" data-es="Estilo">Style</div>
+          </div>
         </div>
-    </section>
+        <a href="./about.html" class="about-link fade-up" data-en="Read More &#x2192;" data-es="Leer M&#xe1;s &#x2192;">Read More &#x2192;</a>
+      </div>
+      <div>
+        <img src="img/2.jpg" alt="Andrick Michel" class="about-img fade-up">
+      </div>
+    </div>
+  </section>
 
-    <!-- Seminar Section -->
-    <section id="seminario" class="seminar">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Próximo Seminario</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="seminar-content">
-                <div class="seminar-info">
-                    <div class="seminar-date">
-                        <span class="date-day">25-26</span>
-                        <span class="date-month">ABRIL</span>
-                        <span class="date-year">2026</span>
-                    </div>
-                    <div class="seminar-details">
-                        <h3 class="seminar-title">Geometría Sagrada Avanzada</h3>
-                        <p class="seminar-description">
-                            Un seminario intensivo de dos días donde exploraremos las técnicas más avanzadas de tatuaje geométrico, desde la teoría matemática hasta la aplicación práctica en piel.
-                        </p>
-                        <div class="seminar-features">
-                            <div class="feature">
-                                <span class="feature-icon">⏰</span>
-                                <span>2 días intensivos</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">👥</span>
-                                <span>Grupos reducidos</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">🎓</span>
-                                <span>Certificación incluida</span>
-                            </div>
-                            <div class="feature">
-                                <span class="feature-icon">🛠️</span>
-                                <span>Material incluido</span>
-                            </div>
-                        </div>
-                        <div class="pricing">
-                            <div class="price-option">
-                                <span class="price-label">Precio Regular</span>
-                                <span class="price-amount">$1,500</span>
-                            </div>
-                            <div class="price-option early-bird">
-                                <span class="price-label">Early Bird</span>
-                                <span class="price-amount">$900</span>
-                                <span class="price-note">¡Ahorra $600!</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="seminar-visual">
-                    <div class="countdown-container">
-                        <div class="countdown" id="countdown">
-                            <div class="countdown-item">
-                                <span class="countdown-number" id="days">--</span>
-                                <span class="countdown-label">Días</span>
-                            </div>
-                            <div class="countdown-item">
-                                <span class="countdown-number" id="hours">--</span>
-                                <span class="countdown-label">Horas</span>
-                            </div>
-                            <div class="countdown-item">
-                                <span class="countdown-number" id="minutes">--</span>
-                                <span class="countdown-label">Min</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- GALLERY PREVIEW -->
+  <section class="gallery-section">
+    <div style="max-width:1200px;margin:0 auto 32px;">
+      <p class="section-label fade-up" data-en="Gallery" data-es="Galer&#xed;a">Gallery</p>
+      <h2 class="fade-up">Recent Work</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="img/1.jpg" alt="Andrick Michel tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/2.jpg" alt="Andrick Michel tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/3.jpg" alt="Andrick Michel tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/4.jpg" alt="Andrick Michel tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/5.jpg" alt="Andrick Michel tattoo" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/6.jpg" alt="Andrick Michel tattoo" loading="lazy"></div>
+    </div>
+    <div class="gallery-cta-wrap fade-up">
+      <a href="./tattoos.html" class="btn-outline" data-en="View Full Gallery &#x2192;" data-es="Ver Galer&#xed;a Completa &#x2192;">View Full Gallery &#x2192;</a>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contacto & Reservas</h2>
-                <div class="section-divider"></div>
-                <p class="section-subtitle">Conecta conmigo para tu próximo tatuaje</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-methods">
-                    <a href="https://wa.me/5215543672494" class="contact-method whatsapp" target="_blank">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-info">
-                            <h3>WhatsApp</h3>
-                            <p>+52 155 4367 2494</p>
-                            <span class="contact-cta">Reserva tu cita</span>
-                        </div>
-                    </a>
-                    <a href="https://instagram.com/alieninkspiral" class="contact-method instagram" target="_blank">
-                        <div class="contact-icon">📸</div>
-                        <div class="contact-info">
-                            <h3>Instagram</h3>
-                            <p>@alieninkspiral</p>
-                            <span class="contact-cta">90.3K seguidores ✓</span>
-                        </div>
-                    </a>
-                    <a href="https://www.threads.net/@alieninkspiral" class="contact-method threads" target="_blank">
-                        <div class="contact-icon">🧵</div>
-                        <div class="contact-info">
-                            <h3>Threads</h3>
-                            <p>@alieninkspiral</p>
-                            <span class="contact-cta">Sígueme</span>
-                        </div>
-                    </a>
-                    <div class="contact-method studio">
-                        <div class="contact-icon">🏢</div>
-                        <div class="contact-info">
-                            <h3>Estudio</h3>
-                            <p>@kivatattoostudio</p>
-                            <span class="contact-cta">CDMX, México</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Información de Consulta</h3>
-                    <p>Para obtener la mejor respuesta, incluye:</p>
-                    <ul>
-                        <li>✨ Descripción de tu idea</li>
-                        <li>📏 Tamaño aproximado</li>
-                        <li>📍 Zona del cuerpo</li>
-                        <li>🎨 Referencias visuales</li>
-                        <li>📅 Disponibilidad de fechas</li>
-                    </ul>
-                    <div class="consultation-note">
-                        <p><strong>Tiempo de respuesta:</strong> 24-48 horas</p>
-                        <p><strong>Consulta:</strong> Gratuita via WhatsApp</p>
-                        <p><strong>Reserva:</strong> 50% anticipo requerido</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- BOOKING CTA -->
+  <section class="booking-preview">
+    <p class="section-label fade-up" data-en="Book a Session" data-es="Reserva tu Sesi&#xf3;n">Book a Session</p>
+    <h2 class="fade-up">Ready for Your Next Tattoo?</h2>
+    <p class="fade-up" data-en="Let's create something meaningful together." data-es="Creemos algo significativo juntos.">Let's create something meaningful together.</p>
+    <a href="./booking.html" class="btn-gold fade-up" data-en="Book a Session" data-es="Reservar Sesi&#xf3;n">Book a Session</a>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>ALIEN INK SPIRAL</h3>
-                    <p>Geometría Sagrada • CDMX • México</p>
-                </div>
-                <div class="footer-social">
-                    <a href="https://instagram.com/alieninkspiral" target="_blank">Instagram</a>
-                    <a href="https://www.threads.net/@alieninkspiral" target="_blank">Threads</a>
-                    <a href="https://wa.me/5215543672494" target="_blank">WhatsApp</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Andrick Michel - GeometriAlien. Todos los derechos reservados.</p>
-                <p><a href="https://bayouwebstudio.com" target="_blank" style="color: inherit; text-decoration: none; opacity: 0.5; font-size: 12px;">Powered by BWS</a></p>
-            </div>
-        </div>
-    </footer>
+  <!-- TESTIMONIALS PREVIEW -->
+  <section class="testimonials-preview">
+    <div class="inner">
+      <p class="section-label fade-up" data-en="Reviews" data-es="Testimonios">Reviews</p>
+      <h2 class="fade-up">What They Say</h2>
+      <div class="testimonial-placeholder fade-up">
+        <p data-en="Be the first to share your experience." data-es="S&#xe9; el primero en compartir tu experiencia.">Be the first to share your experience.</p>
+        <small><a href="./testimonials.html" style="color:var(--gold);text-decoration:none;" data-en="Share your story &#x2192;" data-es="Comparte tu historia &#x2192;">Share your story &#x2192;</a></small>
+      </div>
+    </div>
+  </section>
 
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Alien Ink Spiral - Andrick Michel",
-        "alternateName": "GeometriAlien",
-        "description": "Tatuador especializado en geometría sagrada con 10 años de experiencia en CDMX, México",
-        "url": "https://bayouwebstudio.github.io/alieninkspiral/",
-        "image": "https://bayouwebstudio.github.io/alieninkspiral/images/og-image.jpg",
-        "telephone": "+5215543672494",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Mexico City",
-            "addressRegion": "CDMX",
-            "addressCountry": "MX"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 19.4326,
-            "longitude": -99.1332
-        },
-        "sameAs": [
-            "https://instagram.com/alieninkspiral",
-            "https://www.threads.net/@alieninkspiral"
-        ],
-        "serviceType": "Tattoo Artist",
-        "areaServed": "Mexico City",
-        "knowsAbout": ["Geometric Tattoos", "Sacred Geometry", "Tattoo Art"],
-        "priceRange": "$$"
+  
+  <footer>
+    <div class="footer-logo">Andrick Michel</div>
+    <div class="footer-links">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./tattoos.html">Tattoos</a>
+      <a href="./booking.html">Booking</a>
+      <a href="https://www.instagram.com/alieninkspiral" target="_blank" rel="noopener">Instagram</a>
+      
+    </div>
+    <div class="footer-copy">&#xa9; 2026 Andrick Michel</div>
+  </footer>
+  
+  <script>
+    const LANG = { default: 'en', current: 'en' };
+    function toggleLang() {
+      LANG.current = LANG.current === 'es' ? 'en' : 'es';
+      document.querySelectorAll('[data-es][data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + LANG.current) || el.textContent;
+      });
+      document.querySelectorAll('[data-es-href][data-en-href]').forEach(el => {
+        el.setAttribute('href', el.getAttribute('data-' + LANG.current + '-href') || el.getAttribute('href'));
+      });
     }
-    </script>
-
-    <script src="script.js"></script>
-
-<a href="https://wa.me/5215543672494" target="_blank" class="floating-book-btn">Reservar</a>
-<style>
-.floating-book-btn{position:fixed;bottom:2rem;right:2rem;background:#fff;color:#000;padding:1rem 2rem;font-size:.9rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;z-index:9999;transition:all .3s;box-shadow:0 4px 20px rgba(0,0,0,.3)}
-.floating-book-btn:hover{background:#000;color:#fff;transform:translateY(-2px);box-shadow:0 6px 25px rgba(0,0,0,.4)}
-@media(max-width:768px){.floating-book-btn{bottom:1rem;right:1rem;padding:.8rem 1.5rem;font-size:.8rem}}
-</style>
+    // Fade-up on scroll
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>

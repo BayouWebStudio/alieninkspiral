@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miel — Monchi Monchi Shop | Alien Inkspiral</title>
+<meta name="description" content="Productos de miel natural de Monchi Monchi Shop — disponibles a través de Alien Inkspiral en CDMX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#0a0a0a;--charcoal:#1a1a1a;--gold:#C9A84C;--amber:#D4850A;--white:#f5f5f0;--dim:#888;--border:rgba(255,255,255,0.07)}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:rgba(10,10,10,0.95);border-bottom:1px solid var(--border);backdrop-filter:blur(12px);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--white);text-decoration:none;}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links a{font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color 0.3s;}
+.nav-links a:hover,.nav-links a.active{color:var(--white);}
+.nav-toggle{display:none;background:none;border:none;color:var(--white);font-size:1.4rem;cursor:pointer;}
+.page-hero{padding:140px 72px 80px;border-bottom:1px solid var(--border);max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;}
+.page-label{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;display:block;}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,5rem);font-weight:300;line-height:1;}
+.page-intro{max-width:360px;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--dim);line-height:1.8;font-style:italic;}
+.products-body{max-width:1200px;margin:0 auto;padding:60px 72px 80px;}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+.product-card{background:var(--charcoal);overflow:hidden;border:1px solid var(--border);transition:border-color 0.3s;}
+.product-card:hover{border-color:rgba(212,133,10,0.3);}
+.product-card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;filter:brightness(0.88);transition:filter 0.4s,transform 0.4s;}
+.product-card:hover img{filter:brightness(1);transform:scale(1.03);}
+.product-info{padding:20px 20px 24px;}
+.product-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--white);margin-bottom:8px;}
+.product-desc{font-size:0.82rem;color:var(--dim);line-height:1.6;}
+.cta-section{text-align:center;padding:60px 72px;border-top:1px solid var(--border);}
+.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--white);margin-bottom:12px;}
+.cta-section p{color:var(--dim);margin-bottom:28px;font-size:0.9rem;}
+.btn-amber{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--amber);color:#0a0a0a;text-decoration:none;font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;transition:opacity 0.2s;}
+.btn-amber:hover{opacity:0.85;}
+.float-btn{position:fixed;bottom:28px;right:28px;z-index:999;background:var(--amber);color:#0a0a0a;padding:12px 20px;text-decoration:none;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
+footer{border-top:1px solid var(--border);padding:40px 72px;display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:0.9rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim);}
+.footer-back{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim);text-decoration:none;}
+.footer-back:hover{color:var(--white);}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.7s,transform 0.7s;}
+.fade-up.visible{opacity:1;transform:none;}
+@media(max-width:900px){nav{padding:16px 20px;} .nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:rgba(10,10,10,0.98);padding:20px;gap:16px;border-bottom:1px solid var(--border);z-index:99;} .nav-links.open{display:flex;} .nav-toggle{display:block;} .page-hero{padding:120px 24px 60px;flex-direction:column;gap:20px;align-items:flex-start;} .products-body,.cta-section{padding-left:24px;padding-right:24px;} .products-grid{grid-template-columns:repeat(2,1fr);} footer{padding:32px 24px;}}
+@media(max-width:480px){.products-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="./" class="nav-logo">Alien Inkspiral</a>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+  <ul class="nav-links">
+    <li><a href="./">Inicio</a></li>
+    <li><a href="./tattoos.html">Tatuajes</a></li>
+    <li><a href="./honey.html" class="active">Miel</a></li>
+    <li><a href="./booking.html">Reservaciones</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div>
+    <span class="page-label">Monchi Monchi Shop</span>
+    <h1 class="page-title">Productos<br>de Miel</h1>
+  </div>
+  <p class="page-intro">Miel natural de alta calidad. Disponibles en CDMX — contáctanos vía WhatsApp para pedidos.</p>
+</div>
+
+<div class="products-body">
+  <div class="products-grid">
+    <div class="product-card fade-up">
+      <img src="./img/honey_1.jpg" alt="Producto Monchi Monchi Shop">
+      <div class="product-info">
+        <div class="product-name">Miel Natural</div>
+        <div class="product-desc">Producto artesanal de alta calidad. Disponible en CDMX.</div>
+      </div>
+    </div>
+    <div class="product-card fade-up">
+      <img src="./img/honey_2.jpg" alt="Producto Monchi Monchi Shop">
+      <div class="product-info">
+        <div class="product-name">Monchi Monchi Shop</div>
+        <div class="product-desc">Productos naturales. Pide por WhatsApp.</div>
+      </div>
+    </div>
+    <div class="product-card fade-up">
+      <img src="./img/honey_3.jpg" alt="Producto Monchi Monchi Shop">
+      <div class="product-info">
+        <div class="product-name">Miel Artesanal</div>
+        <div class="product-desc">Disponible para entrega en CDMX.</div>
+      </div>
+    </div>
+    <div class="product-card fade-up">
+      <img src="./img/honey_4.jpg" alt="Producto Monchi Monchi Shop">
+      <div class="product-info">
+        <div class="product-name">Producto Natural</div>
+        <div class="product-desc">Calidad garantizada. Hecho en México.</div>
+      </div>
+    </div>
+    <div class="product-card fade-up">
+      <img src="./img/honey_5.jpg" alt="Producto Monchi Monchi Shop">
+      <div class="product-info">
+        <div class="product-name">Monchi Monchi</div>
+        <div class="product-desc">Más productos disponibles en @monchimonchishop.</div>
+      </div>
+    </div>
+    <div class="product-card fade-up">
+      <img src="./img/honey_6.jpg" alt="Producto Monchi Monchi Shop">
+      <div class="product-info">
+        <div class="product-name">Colección Completa</div>
+        <div class="product-desc">Visita @monchimonchishop en Instagram.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2>¿Te interesa algún producto?</h2>
+  <p>Escríbenos por WhatsApp o visita @monchimonchishop en Instagram para ver todos los productos disponibles.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <a href="https://wa.me/+5215543672494" target="_blank" class="btn-amber">
+      Pedir por WhatsApp →
+    </a>
+    <a href="https://instagram.com/monchimonchishop" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border:1px solid var(--amber);color:var(--amber);text-decoration:none;font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;">
+      Ver en Instagram →
+    </a>
+  </div>
+</div>
+
+<a href="./booking.html" class="float-btn">Reservar Tatuaje</a>
+
+<footer>
+  <div class="footer-logo">Alien Inkspiral</div>
+  <a href="./" class="footer-back">← Inicio</a>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(e => e.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+document.querySelector('.nav-toggle').addEventListener('click',()=>document.querySelector('.nav-links').classList.toggle('open'));
+</script>
+</body>
+</html>
